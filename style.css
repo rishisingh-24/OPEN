@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #74e0a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container 
+{
+    text-align: center;
+    background: rgb(242, 178, 178);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #df3f3f;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.letter {
+    margin-top: 20px;
+    text-align: left;
+    display: none; /* Initially hidden */
+    transform-origin: top; /* Set the transform origin for the opening effect */
+}
+
+.letter-content {
+    animation: openLetter 0.5s forwards; /* Apply the opening animation */
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes openLetter {
+    0% {
+        transform: scaleY(0); /* Start from a scale of 0 */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: scaleY(1); /* End at a scale of 1 */
+        opacity: 1; /* End fully visible */
+    }
+}
+
